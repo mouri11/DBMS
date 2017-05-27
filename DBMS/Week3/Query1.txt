@@ -89,14 +89,14 @@ Result:
 
 7. Show the stadium and the number of goals scored in each stadium. Use -> count(*)
 
-select game.stadium,count(*) from game
+select game.stadium,count(*) as goal_count from game
 join goal on goal.matchid=game.id
 group by game.stadium
 order by count(*) asc
 
 Result:
 
-"STADIUM","COUNT(*)"
+"STADIUM","GOAL_COUNT"
 "Donbass Arena","2"
 "Olimpiyskiy National Sports Complex","3"
 "National Stadium, Warsaw","5"
